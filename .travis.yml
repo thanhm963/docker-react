@@ -14,7 +14,11 @@ deploy:
   env: "Frontend-env"
   bucket_name: "elasticbeanstalk-ap-southeast-1-767398048409"
   bucket_path: "frontend"
-  on: branch:master
+  on:
+    repo: thanhm963/docker-react
+    branches:
+      only:
+        - master
   access_key_id: $AWS_ACCESS_KEY
 
   secret_access_key:
